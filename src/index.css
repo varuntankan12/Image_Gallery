@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,600;1,700;1,800&display=swap');
+
+@font-face {
+    font-family: 'Pattaya';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pattaya/v6/ea8ZadcqV_zkHY-XBdOt9kRHiVqtCg.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+*{
+    transition: all 300ms ease;
+}
+
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #858484;
+    border-radius: 28px;
+    transition: background-color 0.3s;
+}
+
+.checkbox:checked+.toggle {
+    background-color: #f1f1f1;
+}
+
+.checkbox:checked+.toggle::before {
+    background-color: #858484;
+}
+
+.toggle:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    /* Adjust the left position for centering the indicator */
+    bottom: 4px;
+    /* Adjust the bottom position for centering the indicator */
+    background-color: white;
+    /* Set the color of the toggle indicator */
+    border-radius: 50%;
+    /* Set the border-radius for a circular indicator */
+    transition: transform 0.3s;
+}
+
+.checkbox:checked+.toggle:before {
+    transform: translateX(16px);
+    /* Move the indicator to the right when checked */
+}
+
+
+.home-page-cover {
+    background: #E5E5E5 url("/src/Assets/Home_BG.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.noscroll {
+    scroll-behavior: none;
+}
