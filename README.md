@@ -10,7 +10,7 @@ to view the project click [view.](https://image-gallery-by-varun.netlify.app)
 
 3.run `npm install` command to install all required dependencies(make sure your terminal is open in the same folder).
 
-    `npm install`
+    npm install
 
 4.then simply run `npm start` command to run development server.
 
